@@ -1,0 +1,15 @@
+---
+title: "googleVis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r gv, results="asis",cache=TRUE}
+suppressPackageStartupMessages(library(googleVis))
+M <- gvisMotionChart(Fruits,"Fruit","Year",options = list(width=600,height=400))#motionchart
+print(M,file="M.html")#render HTML
+```
+
